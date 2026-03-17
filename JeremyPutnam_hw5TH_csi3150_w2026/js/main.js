@@ -1,9 +1,9 @@
-// Utility: get unique values for a field
+/* Utility: get unique values for a field*/
 function getUniqueValues(data, key) {
     return [...new Set(data.map((item) => item[key]))].sort(); 
 }
 
-// Render checkbox options for makes and colors
+/* Render checkbox options for makes and colors*/
 function renderFilterOptions() {
     const makeContainer = document.getElementById("make-options");
     const colorContainer = document.getElementById("color-options");
@@ -52,7 +52,7 @@ function renderFilterOptions() {
     });
 }
 
-// Render car cards
+/* Render car cards*/
 function renderCars(cars) {
     const list = document.getElementById("car-list");
     const message = document.getElementById("results-message");
@@ -86,7 +86,7 @@ function renderCars(cars) {
     });
 }
 
-// Apply filters based on form values
+/* Apply filters based on form values*/
 function applyFilters(event) {
     if (event) event.preventDefault();
 
@@ -128,7 +128,7 @@ function applyFilters(event) {
     renderCars(filtered);
 }
 
-// Clear filters and show all cars
+/* Clear filters and show all cars*/
 function clearFilters() {
     document.getElementById("filter-form").reset();
     document
@@ -137,7 +137,7 @@ function clearFilters() {
     renderCars(usedCars);
 }
 
-// Init
+/* Init*/
 document.addEventListener("DOMContentLoaded", () => {
     renderFilterOptions();
     renderCars(usedCars);
