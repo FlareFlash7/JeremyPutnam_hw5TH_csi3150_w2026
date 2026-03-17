@@ -1,6 +1,6 @@
 // Utility: get unique values for a field
 function getUniqueValues(data, key) {
-    return [...new Set(data.map((item) => item[key]))].sort();
+    return [...new Set(data.map((item) => item[key]))].sort(); 
 }
 
 // Render checkbox options for makes and colors
