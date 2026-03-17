@@ -156,4 +156,4 @@ const usedCars = [
   },
 ];
 
-module.exports = usedCars;
+const usedCars = [ ... ];
